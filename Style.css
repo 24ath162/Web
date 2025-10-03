@@ -1,18 +1,47 @@
-body{
-    background-color: aqua; 
-    padding: 16px; 
-}  
-h1{
-text-align: center; 
-font-family: Verdana, Geneva, Tahoma, sans-serif;
-font-size: 30px;
-color: brown;
-} 
+¡Claro! Para que la imagen sea cuadrada en lugar de redonda, simplemente quitamos la propiedad `border-radius` y ajustamos las dimensiones de la imagen para que la altura y el ancho sean iguales. Aquí tienes el código actualizado:
 
-.imagen_perfil{
-width: 200px;
-height: 2oopx;
-border-radius: 40px; 
-
+```css
+/* Estilo para el body */
+body {
+    background: linear-gradient(135deg, #00bcd4, #ff4081); /* Degradado moderno */
+    padding: 20px; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Tipografía moderna */
+    color: #333; /* Color de texto más suave */
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+    position: relative; /* Para que el posicionamiento absoluto funcione */
 }
-    
+
+/* Estilo para el título h1 */
+h1 {
+    text-align: center;
+    font-family: 'Roboto', sans-serif; /* Tipografía más actual */
+    font-size: 36px;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra suave para mejorar la visibilidad */
+    margin: 0 0 20px 0;
+}
+
+/* Estilo para la imagen de perfil */
+.imagen_perfil {
+    position: absolute; /* Posicionamos la imagen de forma absoluta */
+    top: 20px; /* Espacio desde la parte superior */
+    right: 20px; /* Espacio desde el borde derecho */
+    width: 220px; /* Ancho igual a la altura para que sea cuadrada */
+    height: 220px; /* Mantener la altura igual al ancho */
+    border: 5px solid #fff; /* Borde blanco */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    object-fit: cover; /* Asegura que la imagen se ajuste sin deformarse */
+}
+```
+
+### Cambios realizados:
+
+1. **Imagen cuadrada**: Ahora la imagen tiene las mismas dimensiones (`width` y `height`), asegurando que sea cuadrada.
+2. **Eliminación del `border-radius`**: Se eliminó para dejar la imagen cuadrada, ya que el `border-radius` redondea los bordes.
+
+Ahora la imagen será un cuadrado de 220px x 220px y estará en la esquina superior derecha. ¿Cómo te va quedando?
